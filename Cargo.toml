@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
 members = [
-    "vecdecque-demo","rust-vec-demo", "linked-list-demo", "cli-fruit-salad",
+    "vecdecque-demo","rust-vec-demo", "linked-list-demo", "cli-fruit-salad", "hash-map-frequency-counter",
     # ...other members...
 ]
