@@ -1,7 +1,6 @@
 use rand::seq::IndexedRandom;
 use::rand::rng;
 use::std::collections::HashSet;
-use::rand::seq::SliceRandom;
 
 fn generate_fruits() -> String {
     let fruits = vec![
