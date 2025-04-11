@@ -15,8 +15,8 @@ impl Ord for Fruit {
     fn cmp(&self, other: &Self) -> std::cmp::Ordering {
         match (self, other) {
             (Fruit::Fig, Fruit::Fig) => std::cmp::Ordering::Equal,
-            (Fruit::Fig, Fruit::Other(_)) => std::cmp::Ordering::Greater,
-            (Fruit::Other(_), Fruit::Fig) => std::cmp::Ordering::Less,
+            (Fruit::Fig, Fruit::Other(_)) => std::cmp::Ordering::Less,
+            (Fruit::Other(_), Fruit::Fig) => std::cmp::Ordering::Greater,
             (Fruit::Other(_), Fruit::Other(_)) => std::cmp::Ordering::Equal,
         }
     }
@@ -55,10 +55,10 @@ fn generate_fruit_salad() -> BinaryHeap<Fruit> {
     fruit_heap
 }
 
-fn main() {
-    
+fn main() { 
     for _ in 0..20 {
         let salad = generate_fruit_salad();
+        salad.iter().is_sorted();
         println!("Here is the fruit salad {:?}", salad);
     }
 }
